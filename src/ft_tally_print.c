@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tally_print.c                                      :+:      :+:    :+:   */
+/*   ft_tally_print.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tgauvrit <tgauvrit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/12 18:13:54 by tgauvrit          #+#    #+#             */
-/*   Updated: 2015/01/14 19:24:56 by tgauvrit         ###   ########.fr       */
+/*   Created: 2018/09/12 16:35:11 by cperrard          #+#    #+#             */
+/*   Updated: 2018/09/12 16:36:52 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int		tally_print(void *mem, int size)
+int		ft_tally_print(void *mem, int size)
 {
 	char	*str;
 	int		i;
@@ -20,9 +20,6 @@ int		tally_print(void *mem, int size)
 	str = mem;
 	i = 0;
 	while (i < size)
-	{
-		write(1, str + i, 1);
-		i++;
-	}
+		write(1, str + i++, 1);
 	return (1);
 }

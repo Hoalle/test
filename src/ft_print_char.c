@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 14:10:34 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/13 17:42:28 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/09/12 16:38:31 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_print_char(va_list ap, char car)
 {
 	char	c;
-	wint_t wc;
+	wint_t	wc;
 	int		b;
 
 	b = 0;
@@ -24,7 +24,7 @@ int		ft_print_char(va_list ap, char car)
 	else
 	{
 		wc = va_arg(ap, wint_t);
-		print_wint(wc);
+		ft_print_wint(wc);
 		return (1);
 	}
 	ft_prec_min_str(1, "\0");

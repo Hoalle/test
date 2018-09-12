@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/19 13:25:41 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/18 17:33:47 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/09/12 16:34:26 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ char g_prec;
 char g_zero;
 char g_noprec;
 
+int			ft_print_wstr(wchar_t *wstr);
+void		ft_print_wint(wint_t wint);
 
-int			print_wstr(wchar_t *wstr);
-void		print_wint(wint_t wint);
-int		tally_print(void *mem, int size);
-
+int		ft_tally_print(void *mem, int size);
 int		ft_printf(const char *format, ...);
 char	ft_check_flags(char *arg);
 int		ft_check_arg(char *f, int i, char **arg, int *j);

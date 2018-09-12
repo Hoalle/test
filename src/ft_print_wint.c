@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_wint.c                                       :+:      :+:    :+:   */
+/*   ft_print_wint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tgauvrit <tgauvrit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/14 19:34:50 by tgauvrit          #+#    #+#             */
-/*   Updated: 2015/01/14 19:35:27 by tgauvrit         ###   ########.fr       */
+/*   Created: 2018/09/12 16:26:04 by cperrard          #+#    #+#             */
+/*   Updated: 2018/09/12 16:41:36 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-void		print_wint(wint_t wint)
+void	ft_print_wint(wint_t wint)
 {
 	char	str[4];
 
 	if (wint <= 0x7F)
-		tally_print(&wint, 1);
+		ft_tally_print(&wint, 1);
 	else if (wint <= 0x7FF)
 	{
 		str[0] = (((wint & 0x07c0) >> 6) + 0xc0);
 		str[1] = ((wint & 0x003F) + 0x80);
-		tally_print(str, 2);
+		ft_tally_print(str, 2);
 	}
 	else if (wint <= 0xFFFF)
 	{
 		str[0] = (((wint & 0xF000) >> 12) + 0xE0);
 		str[1] = (((wint & 0x0Fc0) >> 6) + 0x80);
 		str[2] = ((wint & 0x003F) + 0x80);
-		tally_print(str, 3);
+		ft_tally_print(str, 3);
 	}
 	else if (wint <= 0x10FFFF)
 	{
@@ -37,6 +37,6 @@ void		print_wint(wint_t wint)
 		str[1] = (((wint & 0x03F000) >> 12) + 0x80);
 		str[2] = (((wint & 0x0Fc0) >> 6) + 0x80);
 		str[3] = ((wint & 0x003F) + 0x80);
-		tally_print(str, 4);
+		ft_tally_print(str, 4);
 	}
 }

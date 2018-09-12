@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prec_min_nbr.c                                  :+:      :+:    :+:   */
+/*   ft_prec_min_p.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 14:10:11 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/13 16:11:20 by cperrard         ###   ########.fr       */
+/*   Created: 2018/09/12 16:13:36 by cperrard          #+#    #+#             */
+/*   Updated: 2018/09/12 16:42:02 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int		ft_prec_min_p_s(char *str)
 {
-	int tmp;
-	int len;
-	int ret;
+	int		tmp;
+	int		len;
+	int		ret;
 
 	tmp = 0;
 	len = ft_strlen(str);
@@ -26,8 +26,8 @@ static int		ft_prec_min_p_s(char *str)
 		tmp = g_minfd - len;
 		if (tmp < 0)
 			tmp = 0;
-			ret = 2 + tmp + len;
-		while(tmp--)
+		ret = 2 + tmp + len;
+		while (tmp--)
 			ft_putchar('0');
 		ft_putstr(str);
 	}
@@ -48,11 +48,11 @@ static int		ft_prec_min_p_s(char *str)
 	return (ret);
 }
 
-int		ft_prec_min_p(char *arg, char *str)
+int				ft_prec_min_p(char *arg, char *str)
 {
-	int len;
-	int c;
-	int ret;
+	int		len;
+	int		c;
+	int		ret;
 
 	c = 2;
 	len = ft_strlen(str);

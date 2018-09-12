@@ -7,7 +7,7 @@ int		main()
 
 	ret1 = 0;
 	ret2 = 0;
-	ret1 = ft_printf("{%C}\n", L'é');
+	ret1 = ft_printf("{%C}\n", L'Ë');
 	ret2 = printf("{%C}\n", L'é');
 //	ret2 = printf("{%S}\n", L"米");
 	printf("%d, %d\n", ret1, ret2);

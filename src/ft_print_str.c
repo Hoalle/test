@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 14:10:54 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/15 11:21:39 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/09/12 16:38:53 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int				ft_print_str(va_list ap, char car)
 	int		write;
 	int		c;
 	wchar_t *wstr;
-	int count;
+	int		count;
 
 	c = 0;
 	str = (char*)malloc(sizeof(char));
@@ -110,7 +110,7 @@ int				ft_print_str(va_list ap, char car)
 			ft_putstr("(null)");
 			return (6);
 		}
-		count = print_wstr(wstr);
+		count = ft_print_wstr(wstr);
 	}
 	if (g_noprec == '-')
 		ft_noprec_str(ft_strlen(str), str);

@@ -6,7 +6,7 @@
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/15 14:57:39 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/18 17:33:30 by cperrard         ###   ########.fr       */
+/*   Updated: 2018/09/12 16:06:00 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int				ft_write_flags_octal(char *arg)
 	return (0);
 }
 
-int				ft_ret_s1()
+int				ft_ret_s1(void)
 {
 	int ret;
 
@@ -78,7 +78,7 @@ int				ft_ret_s1()
 	return (ret);
 }
 
-int		ft_prec_undefined(int tmp, int count, char *f)
+int				ft_prec_undefined(int tmp, int count, char *f)
 {
 	char g;
 

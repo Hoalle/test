@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_Start_Condition.c                               :+:      :+:    :+:   */
+/*   ft_check_arg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cperrard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/07 18:00:11 by cperrard          #+#    #+#             */
-/*   Updated: 2018/06/18 15:41:35 by cperrard         ###   ########.fr       */
+/*   Created: 2018/09/12 16:11:13 by cperrard          #+#    #+#             */
+/*   Updated: 2018/09/12 16:11:17 by cperrard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ static char		*ft_copy(char *f, int i)
 
 static	int		ft_undefined_copy(char *f, int tmp, int i)
 {
-	int count;
-	int j;
-	int tmp2;
-	char *arg;
+	int		count;
+	int		j;
+	int		tmp2;
+	char	*arg;
 
 	count = 0;
 	j = 0;
@@ -61,7 +61,7 @@ static	int		ft_undefined_copy(char *f, int tmp, int i)
 			tmp++;
 		count = ft_prec_undefined(tmp, count, f);
 		if (g_noprec == '-')
-		tmp++;
+			tmp++;
 	}
 	while (f[tmp] == 'h' || f[tmp] == 'j' || f[tmp] == 'z' || f[tmp] == 'l'
 			|| f[tmp] == ' ' || f[tmp] == '#')
